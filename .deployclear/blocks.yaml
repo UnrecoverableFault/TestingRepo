@@ -1,0 +1,17 @@
+version: 1
+blocks:
+  - key: build-meta
+    name: Build metadata
+    description: Sample block sourced from GitHub
+    approval_required: true
+    path: blocks/build-meta
+    tf_files:
+      - main.tf
+    fields:
+      - name: tag
+        label: Image Tag
+        type: string
+        required: true
+        description: Image tag used by downstream deploys
+        default: api
+    secrets: []
